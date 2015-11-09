@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Marvel Comics</title>
+    <link rel="stylesheet" href="/libs/angular-material/angular-material.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/libs/angular-material/angular-material.layouts.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="/assests/css/main.css">
+    <meta name="viewport" content="initial-scale=1" />
+  </head>
+  <body data-ng-app="marvelComics">
+    <section class="main-wrapper">
+      <div layout="column">
+        <md-toolbar layout="row" layout-padding layout-align="right" class="md-primary md-whiteframe-z3">
+          <md-button>Home</md-button>
+          <md-button>Characters</md-button>
+          <md-button>Stories</md-button>
+          <md-button>Comics</md-button>
+        </md-toolbar>
+        <!-- be careful: nothing between md-toolbar and md-content -->
+        <md-content flex ui-view>
+          ...
+        </md-content>
+      </div>
+    </section>
+
+
+
+    <!-- Angular Libraies -->
+    <script src="libs/angular/angular.js" charset="utf-8"></script>
+    <script src="libs/angular-animate/angular-animate.js" charset="utf-8"></script>
+    <script src="libs/angular-aria/angular-aria.js" charset="utf-8"></script>
+    <script src="libs/angular-material/angular-material.js" charset="utf-8"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
+
+    <!-- Custom Scripts -->
+    <script src="app.module.js" charset="utf-8"></script>
+    <script src="app.routes.js" charset="utf-8"></script>
+    <!-- Controllers -->
+    <script src="app/home/home.js" charset="utf-8"></script>
+
+    <!-- Services -->
+    <script src="app/home/home.service.js" charset="utf-8"></script>
+    <script src="app/comics/comic.service.js" charset="utf-8"></script>
+    <script src="app/events/events.service.js" charset="utf-8"></script>
+    <script src="app/stories/stories.service.js" charset="utf-8"></script>
+  </body>
+</html>

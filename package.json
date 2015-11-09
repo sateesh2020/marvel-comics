@@ -1,0 +1,21 @@
+{
+  "name": "marvel-comics",
+  "version": "1.0.0",
+  "description": "Node Application using Marvel Comics API",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Marvel",
+    "Node",
+    "Express",
+    "Angular"
+  ],
+  "author": "Satheesh Smart",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "marvel-api": "^0.3.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "marvel-comics",
+  "description": "Node Application using Marvel Comics API",
+  "main": "server",
+  "authors": [
+    "Satheesh Smart"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Marvel",
+    "Node",
+    "Express",
+    "Angular"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-aria": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "~0.2.15",
+
+  }
+}
