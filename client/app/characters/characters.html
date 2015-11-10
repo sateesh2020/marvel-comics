@@ -1,0 +1,33 @@
+<section>
+  <h1 class="md-display-2">Marvel Characters</h1>
+  <div layout="row">
+    <div flex="20" data-ng-repeat="char in chars.characters">
+      <md-card class="characters">
+        <img data-ng-src="{{char.thumbnail.path+'.'+char.thumbnail.extension}}" class="md-card-image" alt="image caption">
+        <md-card-content>
+         <h4 class="md-subhead">{{char.name}}</h4>
+         <md-list ng-cloak>
+           <md-list-item>
+             <p> No of Comics </p>
+             <md-badge class="md-secondary">
+                 {{char.comics.available}}
+             </md-badge>
+           </md-list-item>
+           <md-list-item>
+             <p> No of Stories </p>
+             <md-badge class="md-secondary">
+                 {{char.stories.available}}
+             </md-badge>
+           </md-list-item>
+           <md-list-item>
+             <p> No of Series </p>
+             <md-badge class="md-secondary">
+                 {{char.series.available}}
+             </md-badge>
+           </md-list-item>
+         </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</section>

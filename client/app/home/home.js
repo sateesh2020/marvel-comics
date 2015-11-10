@@ -28,7 +28,6 @@
       function getSomeEvents(noOfEvents){
         return eventsService.getSomeEvents(noOfEvents).then(function(data){
           scope.events = data;
-          console.log(data);
           return scope.events;
         })
       }

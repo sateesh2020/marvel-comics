@@ -1,12 +1,12 @@
 <section>
   <h1 class="md-display-2">Welcome to Marvel Comics</h1>
-  <h2 data-ng-show="characters.length>0">Marvel Characters</h2>
+  <h2 class="md-display-1" data-ng-show="characters.length>0">Marvel Characters</h2>
   <div layout="row">
     <div flex data-ng-repeat="char in characters | limitTo:5">
       <md-card class="characters">
         <img data-ng-src="{{char.thumbnail.path+'.'+char.thumbnail.extension}}" class="md-card-image" alt="image caption">
         <md-card-content>
-         <h4>{{char.name}}</h4>
+         <h4 class="md-subhead">{{char.name}}</h4>
          <md-list ng-cloak>
            <md-list-item>
              <p> No of Comics </p>
@@ -31,24 +31,24 @@
       </md-card>
     </div>
   </div>
-  <h2 data-ng-show="comics.length>0">Marvel Comics</h2>
+  <h2 class="md-display-1" data-ng-show="comics.length>0">Marvel Comics</h2>
   <div layout="row">
     <div flex data-ng-repeat="comic in comics | limitTo:5">
       <md-card class="comics">
         <img data-ng-src="{{comic.thumbnail.path+'.'+comic.thumbnail.extension}}" class="md-card-image" alt="image caption">
         <md-card-content>
-         <h4>{{comic.title}}</h4>
+         <h4 class="md-subhead">{{comic.title}}</h4>
         </md-card-content>
       </md-card>
     </div>
   </div>
-  <h2 data-ng-show="events.length>0">Marvel Events</h2>
+  <h2 class="md-display-1" data-ng-show="events.length>0">Marvel Events</h2>
   <div layout="row">
     <div flex data-ng-repeat="event in events | limitTo:5">
       <md-card class="comics">
         <img data-ng-src="{{event.thumbnail.path+'.'+event.thumbnail.extension}}" class="md-card-image" alt="image caption">
         <md-card-content>
-            <h4>{{event.title}}</h4>
+            <h4 class="md-subhead" >{{event.title}}</h4>
             <md-list ng-cloak>
               <md-list-item>
                 <p> Event Characters </p>
@@ -85,13 +85,12 @@
       </md-card>
     </div>
   </div>
-  <h2 data-ng-show="events.length>0">Marvel Stories</h2>
+  <h2 class="md-display-1" data-ng-show="events.length>0">Marvel Stories</h2>
   <div layout="row">
     <div flex data-ng-repeat="story in stories | limitTo:5">
       <md-card class="comics">
-        <img data-ng-src="{{story.thumbnail.path+'.'+story.thumbnail.extension}}" class="md-card-image" alt="image caption">
         <md-card-content>
-            <h4>{{story.title}}</h4>
+            <h4 class="md-subhead">{{story.title}}</h4>
         </md-card-content>
       </md-card>
     </div>

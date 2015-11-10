@@ -16,12 +16,10 @@ module.exports.getAllStories = function(req,res){
 
 module.exports.getSomeStories = function(req,res){
   var noOfStories = req.params.noOfStories;
-  console.log(noOfStories);
   marvelStories.stories.findAll(noOfStories,function(err, results) {
     if (err) {
       return console.error(err);
     }
-    console.log(results);
     res.json(results);
   });
 }

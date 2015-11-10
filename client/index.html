@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Marvel Comics</title>
+    <link rel="stylesheet" href="/libs/materialize/dist/css/materialize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/libs/angular-material/angular-material.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="/libs/angular-material/angular-material.layouts.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
@@ -13,14 +14,19 @@
     <section class="main-wrapper">
       <div layout="column">
         <md-toolbar layout="row" layout-padding layout-align="right" class="md-primary md-whiteframe-z3">
-          <md-button>Home</md-button>
-          <md-button>Characters</md-button>
-          <md-button>Stories</md-button>
-          <md-button>Comics</md-button>
+          <md-button ui-sref="home">Home</md-button>
+          <md-button ui-sref="characters">Characters</md-button>
+          <md-button ui-sref="stories">Stories</md-button>
+          <md-button ui-sref="comics">Comics</md-button>
         </md-toolbar>
         <!-- be careful: nothing between md-toolbar and md-content -->
-        <md-content flex ui-view>
-          ...
+        <md-content flex class="main">
+          <div class="loader" marvel-spinner>
+            <img src="assests/img/marvelLoader.gif" class="loader-img" alt="Loading..........." />
+          </div>
+          <div class="content" ui-view>
+
+          </div>
         </md-content>
       </div>
     </section>
@@ -37,11 +43,15 @@
     <!-- Custom Scripts -->
     <script src="app.module.js" charset="utf-8"></script>
     <script src="app.routes.js" charset="utf-8"></script>
+
+    <script src="app/blocks/blocks.directives.js" charset="utf-8"></script>
     <!-- Controllers -->
     <script src="app/home/home.js" charset="utf-8"></script>
+    <script src="app/characters/characters.js" charset="utf-8"></script>
 
     <!-- Services -->
     <script src="app/home/home.service.js" charset="utf-8"></script>
+    <script src="app/characters/characters.service.js" charset="utf-8"></script>
     <script src="app/comics/comic.service.js" charset="utf-8"></script>
     <script src="app/events/events.service.js" charset="utf-8"></script>
     <script src="app/stories/stories.service.js" charset="utf-8"></script>

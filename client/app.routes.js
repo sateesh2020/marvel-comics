@@ -10,10 +10,16 @@
     $stateProvider
 
     // Main Page ========================================
-      .state('home', {
+    .state('home', {
       url: '/home',
       templateUrl: 'app/home/home.html',
       controller:'HomeController'
+    })
+    .state('characters', {
+      url: '/characters',
+      templateUrl: 'app/characters/characters.html',
+      controller:'CharactersController',
+      controllerAs:'chars'
     });
 
   }]);
